@@ -10,5 +10,5 @@ export function playRandomSound() {
   let soundArr = [sound1, sound2, sound3, sound4]
   let random = Math.floor(Math.random() * soundArr.length)
   soundArr[random].play()
+  //console.log('play!', soundArr[random])
 }
-
