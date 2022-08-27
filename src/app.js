@@ -26,3 +26,4 @@ document.body.addEventListener("click", event => {
     // menu.trigger(event)
 })
 
+console.log(`123`)
