@@ -1,8 +1,8 @@
 import {Module} from '../core/module'
 
 export class RandomSoundModule extends Module {
-    constructor(name) {
-        this.name = 'Случайный звук'
+    constructor(name, type) {
+        super (name, type)
     }
     playRandomSound() {
         const sound1 = new Audio('https://song.nazvonok.ru/song/6c80/sms-uvedomlenie-na-iphone-zvuk-sms-na-telefonah-apple.mp3')
@@ -14,5 +14,13 @@ export class RandomSoundModule extends Module {
         soundArr[random].play()
         //console.log('play!', soundArr[random])
     }
+
+    trigger() {
+        this.playRandomSound()
+      }
+    
+      toHTML() {
+        return `<li class="menu-item" data-type="${this.type}">${this.text}</li>`
+      }
 
 }
